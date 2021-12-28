@@ -94,7 +94,7 @@ const userController = {
                 res.status(404).json({ message:'No Thought Found'});
                 return;
             }
-            res.json(dbUserData);
+            res.json(dbUserData+ {message:'You have deleted an User'});
         })
        .catch(err => res.json(err));   
     },
